@@ -29,15 +29,15 @@ class RetrofitUtil {
     }
 
 
-    private fun getGankApi(): GankApi {
-        val retrofit: Retrofit = Retrofit.Builder()
-                .baseUrl(GANKURL)
-                .client(getClient())
-                .addConverterFactory(GsonConverterFactory.create())
-                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                .build()
-        return retrofit.create(GankApi)
-    }
+//    private fun getGankApi(): GankApi {
+//        val retrofit: Retrofit = Retrofit.Builder()
+//                .baseUrl(GANKURL)
+//                .client(getClient())
+//                .addConverterFactory(GsonConverterFactory.create())
+//                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+//                .build()
+//        return retrofit.create(GankApi)
+//    }
 
 
 }
