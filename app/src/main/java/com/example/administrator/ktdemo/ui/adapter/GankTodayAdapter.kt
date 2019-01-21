@@ -1,10 +1,6 @@
 package com.example.administrator.ktdemo.ui.adapter
 
-import android.content.Context
-import android.support.v4.content.ContextCompat
 import android.view.LayoutInflater
-import android.view.View
-import com.bumptech.glide.Glide
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder
 import com.example.administrator.ktdemo.R
@@ -29,7 +25,7 @@ class GankTodayAdapter : BaseQuickAdapter<TodayBean, BaseViewHolder> {
         view.ll_views.removeAllViews()
         for (bean in item.list!!) {
             val view_today = LayoutInflater.from(mContext).inflate(R.layout.item_today, null)
-            if (bean.images!!.size == 0) {
+            if (bean.images!=null&&bean.images!!.size != 0) {
                 GlideUtil.load(mContext, bean.images!![0], view_today.img)
             } else {
                 view_today.img.setImageResource(RandomUtil.getColor())

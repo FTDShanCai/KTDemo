@@ -5,7 +5,7 @@ package com.example.administrator.ktdemo.entity
  * 邮箱: 931952032@qq.com
  * <p>description:
  */
-class GankBean {
+class GankBean  {
     var _id: String? = null
     var createdAt: String? = null
     var desc: String? = null

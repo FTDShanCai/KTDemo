@@ -5,13 +5,4 @@ package com.example.administrator.ktdemo.entity
  * 邮箱: 931952032@qq.com
  * <p>description:
  */
-class TodayBean {
-
-    constructor(title: String?, list: ArrayList<GankBean>?) {
-        this.title = title
-        this.list = list
-    }
-
-    var title: String? = null
-    var list: ArrayList<GankBean>? = null
-}
+data class TodayBean(val title: String?, val list: ArrayList<GankBean>?)
