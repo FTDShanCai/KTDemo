@@ -2,6 +2,7 @@ package com.example.administrator.ktdemo.api
 
 import com.example.administrator.ktdemo.entity.GankBaseResult
 import com.example.administrator.ktdemo.entity.GankBean
+import com.example.administrator.ktdemo.entity.GankToDayBean
 import io.reactivex.Observable
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -24,4 +25,8 @@ interface GankApi {
     //获取发过干货日期接口
     @GET("day/history")
     fun getHistory(): Observable<GankBaseResult<ArrayList<String>>>
+
+    //获取最新一天的干货
+    @GET("today")
+    fun getToday(): Observable<GankBaseResult<GankToDayBean>>
 }

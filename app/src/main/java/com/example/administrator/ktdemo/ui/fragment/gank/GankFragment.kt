@@ -1,4 +1,4 @@
-package com.example.administrator.ktdemo.ui.fragment.home
+package com.example.administrator.ktdemo.ui.fragment.gank
 
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
@@ -13,7 +13,6 @@ import com.example.administrator.ktdemo.ui.adapter.GankListAdapter
 import com.scwang.smartrefresh.layout.api.RefreshLayout
 import com.scwang.smartrefresh.layout.listener.OnRefreshLoadMoreListener
 import com.trello.rxlifecycle2.android.FragmentEvent
-import io.reactivex.Observer
 import kotlinx.android.synthetic.main.fragment_gank_list.*
 
 /**

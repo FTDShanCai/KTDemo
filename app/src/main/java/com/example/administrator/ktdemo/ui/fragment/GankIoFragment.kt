@@ -4,7 +4,8 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import com.example.administrator.ktdemo.R
 import com.example.administrator.ktdemo.base.BaseFragment
-import com.example.administrator.ktdemo.ui.fragment.home.HomeFragment
+import com.example.administrator.ktdemo.ui.fragment.gank.GankTodayFragment
+import com.example.administrator.ktdemo.ui.fragment.gank.HomeFragment
 import kotlinx.android.synthetic.main.fragment_gank_io.*
 
 /**
@@ -15,6 +16,8 @@ import kotlinx.android.synthetic.main.fragment_gank_io.*
 class GankIoFragment : BaseFragment() {
 
     private val homeFragment = HomeFragment()
+    private val todayFragment = GankTodayFragment()
+
     private var currentFragment: Fragment? = null
 
     override fun getLayoutId(): Int {
@@ -29,7 +32,7 @@ class GankIoFragment : BaseFragment() {
                 }
 
                 R.id.menu_today -> {
-
+                    changeFragment(todayFragment)
                 }
                 R.id.menu_history -> {
 
@@ -60,7 +63,7 @@ class GankIoFragment : BaseFragment() {
         if (fragment.isAdded) {
             transaction.show(fragment)
         } else {
-            transaction.add(R.id.frame_layout, fragment)
+            transaction.add(R.id.frame_gank, fragment)
         }
         transaction.commitAllowingStateLoss()
         currentFragment = fragment

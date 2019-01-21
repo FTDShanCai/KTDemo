@@ -1,11 +1,10 @@
-package com.example.administrator.ktdemo.ui.fragment.home
+package com.example.administrator.ktdemo.ui.fragment.gank
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import com.example.administrator.ktdemo.R
 import com.example.administrator.ktdemo.base.BaseFragment
 import com.example.administrator.ktdemo.ui.adapter.HomePagerAdapter
-import com.example.administrator.ktdemo.ui.fragment.home.GankFragment
 import kotlinx.android.synthetic.main.fragment_home.*
 
 /**

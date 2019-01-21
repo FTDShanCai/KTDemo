@@ -10,7 +10,6 @@ import android.view.MenuItem
 import com.example.administrator.ktdemo.R
 import com.example.administrator.ktdemo.base.BaseActivity
 import com.example.administrator.ktdemo.ui.fragment.GankIoFragment
-import com.example.administrator.ktdemo.ui.fragment.home.HomeFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_dr.*
 
