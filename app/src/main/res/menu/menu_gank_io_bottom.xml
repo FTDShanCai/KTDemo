@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@mipmap/ic_menu_home"
+        android:title="首页"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menu_today"
+        android:icon="@mipmap/ic_menu_emoticons"
+        android:title="今日"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menu_history"
+        android:icon="@mipmap/ic_menu_my_calendar"
+        android:title="日期"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menu_fu_li"
+        android:icon="@mipmap/ic_menu_allfriends"
+        android:title="福利"
+        app:showAsAction="ifRoom" />
+</menu>

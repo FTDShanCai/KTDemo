@@ -1,4 +1,4 @@
-package com.example.administrator.ktdemo.ui.fragment
+package com.example.administrator.ktdemo.ui.fragment.home
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -18,7 +18,7 @@ class HomeFragment : BaseFragment() {
 
     }
 
-    lateinit var adapter: HomePagerAdapter
+    private lateinit var adapter: HomePagerAdapter
 
     override fun getLayoutId(): Int {
         return R.layout.fragment_home

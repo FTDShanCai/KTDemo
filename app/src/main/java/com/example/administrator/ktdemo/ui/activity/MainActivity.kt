@@ -9,14 +9,15 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.view.MenuItem
 import com.example.administrator.ktdemo.R
 import com.example.administrator.ktdemo.base.BaseActivity
-import com.example.administrator.ktdemo.ui.fragment.HomeFragment
+import com.example.administrator.ktdemo.ui.fragment.GankIoFragment
+import com.example.administrator.ktdemo.ui.fragment.home.HomeFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_dr.*
 
 class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private var currentFragment: Fragment? = null
-    private val homeFragment: HomeFragment = HomeFragment()
+    private val gankFragment: GankIoFragment = GankIoFragment()
 
     override fun getLayoutId(): Int {
         return R.layout.activity_main
@@ -36,7 +37,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     override fun onNavigationItemSelected(menu: MenuItem): Boolean {
         when (menu.itemId) {
             R.id.menu_home -> {
-                changeFm(homeFragment)
+                changeFm(gankFragment)
             }
 
             R.id.menu_fu_li -> {

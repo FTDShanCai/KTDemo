@@ -20,4 +20,8 @@ interface GankApi {
     //获取指定类型的列表数据
     @GET("data/{type}/15/{page}")
     fun getListData(@Path("type") type: String, @Path("page") page: String): Observable<GankBaseResult<ArrayList<GankBean>>>
+
+    //获取发过干货日期接口
+    @GET("day/history")
+    fun getHistory(): Observable<GankBaseResult<ArrayList<String>>>
 }
