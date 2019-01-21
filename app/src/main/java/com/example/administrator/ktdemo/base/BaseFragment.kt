@@ -15,7 +15,7 @@ import com.trello.rxlifecycle2.components.support.RxFragment
  */
 abstract class BaseFragment : RxFragment() {
     var misCreateView: Boolean = false
-
+    var isLoadData: Boolean = false
     abstract fun getLayoutId(): Int
 
     abstract fun initViews(savedInstanceState: Bundle?)
@@ -27,9 +27,7 @@ abstract class BaseFragment : RxFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         misCreateView = true
         initViews(savedInstanceState)
-        if (userVisibleHint && misCreateView) {
-            lazyLoad()
-        }
+        loadData()
     }
 
 
@@ -43,7 +41,12 @@ abstract class BaseFragment : RxFragment() {
 
     override fun setUserVisibleHint(isVisibleToUser: Boolean) {
         super.setUserVisibleHint(isVisibleToUser)
-        if (userVisibleHint && misCreateView) {
+        loadData()
+    }
+
+    private fun loadData() {
+        if (userVisibleHint && misCreateView && !isLoadData) {
+            isLoadData = true
             lazyLoad()
         }
     }

@@ -13,8 +13,11 @@ import retrofit2.http.Path
  */
 interface GankApi {
 
+    //获取gank 随机数据
     @GET("random/data/{type}/20")
     fun getRandomData(@Path("type") type: String): Observable<GankBaseResult<ArrayList<GankBean>>>
 
-
+    //获取指定类型的列表数据
+    @GET("data/{type}/15/{page}")
+    fun getListData(@Path("type") type: String, @Path("page") page: String): Observable<GankBaseResult<ArrayList<GankBean>>>
 }

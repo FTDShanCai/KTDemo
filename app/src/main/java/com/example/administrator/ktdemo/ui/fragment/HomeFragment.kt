@@ -38,6 +38,7 @@ class HomeFragment : BaseFragment() {
 
         adapter = HomePagerAdapter(childFragmentManager, fragments, titles)
         view_pager.adapter = adapter
+        view_pager.offscreenPageLimit = 2
         tab_layout.setupWithViewPager(view_pager)
     }
 
