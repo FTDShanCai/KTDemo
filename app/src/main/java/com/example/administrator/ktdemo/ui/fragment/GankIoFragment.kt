@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import com.example.administrator.ktdemo.R
 import com.example.administrator.ktdemo.base.BaseFragment
+import com.example.administrator.ktdemo.ui.fragment.gank.GankHistoryFragment
 import com.example.administrator.ktdemo.ui.fragment.gank.GankTodayFragment
 import com.example.administrator.ktdemo.ui.fragment.gank.HomeFragment
 import kotlinx.android.synthetic.main.fragment_gank_io.*
@@ -17,6 +18,7 @@ class GankIoFragment : BaseFragment() {
 
     private val homeFragment = HomeFragment()
     private val todayFragment = GankTodayFragment()
+    private val historyFragment = GankHistoryFragment()
 
     private var currentFragment: Fragment? = null
 
@@ -35,7 +37,7 @@ class GankIoFragment : BaseFragment() {
                     changeFragment(todayFragment)
                 }
                 R.id.menu_history -> {
-
+                    changeFragment(historyFragment)
                 }
                 R.id.menu_fu_li -> {
 

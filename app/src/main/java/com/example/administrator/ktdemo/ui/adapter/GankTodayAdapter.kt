@@ -1,5 +1,6 @@
 package com.example.administrator.ktdemo.ui.adapter
 
+import android.support.v4.content.ContextCompat
 import android.view.LayoutInflater
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder
@@ -21,11 +22,12 @@ class GankTodayAdapter : BaseQuickAdapter<TodayBean, BaseViewHolder> {
 
     override fun convert(helper: BaseViewHolder?, item: TodayBean?) {
         val view = helper!!.itemView
+        view.ll_bg.setBackgroundColor(ContextCompat.getColor(mContext, RandomUtil.getColor()))
         view.tv_title.text = item!!.title
         view.ll_views.removeAllViews()
         for (bean in item.list!!) {
             val view_today = LayoutInflater.from(mContext).inflate(R.layout.item_today, null)
-            if (bean.images!=null&&bean.images!!.size != 0) {
+            if (bean.images != null && bean.images!!.size != 0) {
                 GlideUtil.load(mContext, bean.images!![0], view_today.img)
             } else {
                 view_today.img.setImageResource(RandomUtil.getColor())
