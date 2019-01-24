@@ -12,6 +12,9 @@ import com.example.administrator.ktdemo.base.BaseActivity
 import com.example.administrator.ktdemo.ui.fragment.GankIoFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_dr.*
+import org.jetbrains.anko.alert
+import org.jetbrains.anko.cancelButton
+import org.jetbrains.anko.okButton
 
 class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -31,6 +34,22 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         toggle.syncState()
 
         navigation.setNavigationItemSelectedListener(this)
+
+        navigation.setCheckedItem(R.id.menu_home)
+        changeFm(gankFragment)
+
+        fab.setOnClickListener {
+            showDiloag()
+        }
+    }
+
+    private fun showDiloag() {
+        val dialog = alert("message", "title") {
+            okButton { toast("i am ok") }
+            cancelButton { toast("cancel") }
+        }
+
+        dialog.show()
     }
 
     override fun onNavigationItemSelected(menu: MenuItem): Boolean {

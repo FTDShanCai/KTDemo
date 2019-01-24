@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import com.example.administrator.ktdemo.R
 import com.example.administrator.ktdemo.base.BaseFragment
+import com.example.administrator.ktdemo.ui.fragment.gank.GankFuliFragment
 import com.example.administrator.ktdemo.ui.fragment.gank.GankHistoryFragment
 import com.example.administrator.ktdemo.ui.fragment.gank.GankTodayFragment
 import com.example.administrator.ktdemo.ui.fragment.gank.HomeFragment
@@ -19,6 +20,7 @@ class GankIoFragment : BaseFragment() {
     private val homeFragment = HomeFragment()
     private val todayFragment = GankTodayFragment()
     private val historyFragment = GankHistoryFragment()
+    private val fankFuliFragmnt = GankFuliFragment()
 
     private var currentFragment: Fragment? = null
 
@@ -32,7 +34,6 @@ class GankIoFragment : BaseFragment() {
                 R.id.menu_home -> {
                     changeFragment(homeFragment)
                 }
-
                 R.id.menu_today -> {
                     changeFragment(todayFragment)
                 }
@@ -40,7 +41,7 @@ class GankIoFragment : BaseFragment() {
                     changeFragment(historyFragment)
                 }
                 R.id.menu_fu_li -> {
-
+                    changeFragment(fankFuliFragmnt)
                 }
 
             }
@@ -70,6 +71,10 @@ class GankIoFragment : BaseFragment() {
         transaction.commitAllowingStateLoss()
         currentFragment = fragment
     }
+
+
+
+
 }
 
 
